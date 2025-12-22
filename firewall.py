@@ -4,7 +4,7 @@ def random_ip():
     return f"192.168.1.{random.randint(0,20)}"
 
 def check_rules(random_ip, firewall_rules):
-    for rule_ip, action in firewall_rules.items():
+    for rule_ip, action in firewall_rule:
         if rule_ip == random_ip:
             return action
         # return immediately stops the function and sends back a value.
